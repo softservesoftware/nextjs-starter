@@ -1,0 +1,41 @@
+{
+  "name": "next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prisma:update:dev": "dotenv -e .env.local -- prisma generate && dotenv -e .env.local -- prisma db push",
+    "prisma:update:prod": "prisma generate && prisma db push",
+    "start:db": "dotenv -e .env.local -- docker-compose up -d --wait",
+    "dev": "npm run start:db && npm run prisma:update:dev && next dev",
+    "build": "npm run prisma:update:prod && next build ",
+    "build:ext": "zip -r src/extension/extension.zip src/extension",
+    "build:dev": "dotenv -e .env.local -- npm run build",
+    "start": "next start",
+    "lint": "next lint --no-cache"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "next": "15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20.17.17",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "postcss": "^8",
+    "prisma": "^6.3.1",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
