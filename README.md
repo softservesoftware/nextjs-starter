@@ -28,9 +28,36 @@ cd nextjs-starter
 
 ### 2. Install Dependencies
 
+#### Node Version Manager (nvm) & Node.js
+
+This is a great tool for managing different versions of Node.js on a single machine. It enables us to `nvm use 22`, `nvm install 20`, etc. so we can easily install or switch between node versions.
+
+```sh
+nvm --version
+```
+
+If that command returns an error, you'll need to install nvm. This is a great guide for installing nvm: [Node Version Manager Install Instructions](https://sukiphan.medium.com/how-to-install-nvm-node-version-manager-on-macos-d9fe432cc7db)
+
+Once installed ensure you have the latest stable version of node installed (currently 22).
+```sh
+nvm install 22
+```
+
+#### Docker
+Docker is a tool for running containers. It's what we use for running our mongo database locally. We recommend having the latest version of docker installed.
+
+```sh
+brew install docker
+```
+
+You can also follow the docker getting started guide here: [Docker Getting Started](https://www.docker.com/get-started/)
+
+#### Install project dependencies
+
 ```sh
 npm install
 ```
+
 
 ### 3. Start the Application
 ```sh
