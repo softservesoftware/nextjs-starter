@@ -41,6 +41,7 @@ If that command returns an error, you'll need to install nvm. This is a great gu
 Once installed ensure you have the latest stable version of node installed (currently 22).
 ```sh
 nvm install 22
+nvm use 22
 ```
 
 #### Docker
