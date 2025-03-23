@@ -1,0 +1,17 @@
+type Subscription {
+  id String
+  userId String
+  status SubscriptionStatus
+  customerId String
+  planId String
+  variantId String
+  nextPaymentDate DateTime
+}
+
+enum SubscriptionStatus {
+  active
+  inactive
+  trialing
+  past_due
+  canceled
+}
